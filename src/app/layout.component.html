@@ -9,9 +9,9 @@
       </div>
       <div id="navigation">
         <ul>
-          <li><a href="#">all posts</a></li>
-          <li><a href="#">about me</a></li>
-          <li><a href="#">contact</a></li>
+          <li><a [routerLink] = "['/allposts']">all posts</a></li>
+          <li><a [routerLink] = "['/aboutme']">about me</a></li>
+          <li><a [routerLink] = "['/contact']">contact</a></li>
         </ul>
       </div>
       <div id="footer">
@@ -22,14 +22,6 @@
     </div>
   </div>
   <div class="col-xs-9 whiteCanvas fullHeight">
-    <blog-main-page></blog-main-page>
-    <hr>
-    <blog-all-posts></blog-all-posts>
-    <hr>
-    <blog-post></blog-post>
-    <hr>
-    <blog-about-me></blog-about-me>
-    <hr>
-    <blog-contact></blog-contact>
+    <router-outlet></router-outlet>
   </div>
 </section>

@@ -10,6 +10,8 @@ import { PostComponent } from './blog/post';
 import { AboutMeComponent } from './about-me';
 import { ContactComponent } from './contact';
 
+import { Routing } from './app.routing';
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -23,7 +25,8 @@ import { ContactComponent } from './contact';
     imports: [
         BrowserModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        Routing
     ],
     providers: [],
     bootstrap: [AppComponent]
