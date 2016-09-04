@@ -4,11 +4,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component'; 
 import { LayoutComponent } from './layout.component';
+import { MainPageComponent } from './main-page';
+import { AllPostsComponent } from './blog/all-posts';
+import { PostComponent } from './blog/post';
+import { AboutMeComponent } from './about-me';
+import { ContactComponent } from './contact';
 
 @NgModule({
     declarations: [
         AppComponent,
-        LayoutComponent
+        LayoutComponent,
+        MainPageComponent,
+        AllPostsComponent,
+        PostComponent,
+        AboutMeComponent,
+        ContactComponent
     ],
     imports: [
         BrowserModule,
