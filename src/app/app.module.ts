@@ -9,6 +9,7 @@ import { AllPostsComponent } from './blog/all-posts';
 import { PostComponent } from './blog/post';
 import { AboutMeComponent } from './about-me';
 import { ContactComponent } from './contact';
+import { LoadpostsComponent } from './blog/loadposts.component';
 
 import { Routing } from './app.routing';
 
@@ -20,7 +21,8 @@ import { Routing } from './app.routing';
         AllPostsComponent,
         PostComponent,
         AboutMeComponent,
-        ContactComponent
+        ContactComponent,
+        LoadpostsComponent
     ],
     imports: [
         BrowserModule,
