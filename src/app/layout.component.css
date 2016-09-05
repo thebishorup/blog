@@ -1,10 +1,30 @@
+/*BODY COLOR: #A4CACC, #6991AC*/
+@import url(//db.onlinewebfonts.com/c/014548f41ad04abd5cc977ab57533a3b?family=LPBambusW00-Light);
+@import url(//db.onlinewebfonts.com/c/e2c812d3302473831ceb066938fb9b1f?family=LPBambusW00-Regular);
+
 html, body {
     height: 100vh;
     margin: 0;
 }
 
-.redborder{
-    border: 1px solid red;
+p{
+    color: #282828;
+    font-family: 'Droid Serif', serif;
+    font-size: 20px;
+    word-spacing: 2px;
+    line-height: 140%;
+}
+
+#profileName{
+    font-family: "LPBambusW00-Regular";
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+.scrollable{
+    /*position: relative;*/
+    overflow: auto;
+    z-index: 1;
 }
 
 .greenborder{
@@ -24,12 +44,12 @@ html, body {
 }
 
 .darkgreyCanvas{
-    background-color: #283018;
-    color: #f0eceb;
+    background-color: #2D2E33;
+    color: #F5F5F5;
 }
 
 .whiteCanvas{
-    background-color: #f0eceb;
+    background-color: #F5F5F5;
 }
 
 .sideBar{
@@ -47,7 +67,7 @@ html, body {
 }
 
 #navigation ul li a{
-    color: #729f98;
+    color: #929CA4;
 }
 
 #profileName{
@@ -56,7 +76,8 @@ html, body {
 }
 
 #footer{
-    background-color: #aa863a;
+    background-color: #0FB492;
+    color: #BDEFE5;
     position: absolute;
     left: 0;
     bottom: 0;

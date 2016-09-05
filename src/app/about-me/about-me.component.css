@@ -1,0 +1,14 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto+Slab';
+@import 'https://fonts.googleapis.com/css?family=Droid+Serif';
+
+.aboutme{
+    padding: 15px;
+}
+
+.aboutme p{
+    color: #282828;
+    font-family: 'Droid Serif', serif;
+    font-size: 20px;
+    word-spacing: 2px;
+    line-height: 140%;
+}
