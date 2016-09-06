@@ -14,7 +14,8 @@ const APP_ROUTES: Routes = [
   { path: 'main', component: MainPageComponent },
   { path: 'allposts', component: AllPostsComponent , children: BLOGPOST_ROUTES }, //TODO:::::
   { path: 'aboutme', component: AboutMeComponent },
-  { path: 'contact', component: ContactComponent }
+  { path: 'contact', component: ContactComponent },
+  { path: '**', component: MainPageComponent }
 ];
 
 export const Routing = RouterModule.forRoot(APP_ROUTES);
