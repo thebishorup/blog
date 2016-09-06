@@ -2,16 +2,20 @@
 @import 'https://fonts.googleapis.com/css?family=Patua+One';
 @import 'https://fonts.googleapis.com/css?family=Volkhov';
 
+@import 'https://fonts.googleapis.com/css?family=Rokkitt';
+
 h3{
-    font-family: 'Volkhov', serif;
-    font-size: 32px;
-    text-transform: uppercase; 
+    font-family: 'Rokkitt', serif;
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    /*text-transform: uppercase; */
 }
 
 p{
     color: #282828;
     font-family: 'Droid Serif', serif;
-    font-size: 20px;
+    font-size: 18px;
     word-spacing: 2px;
     line-height: 140%;
 }
@@ -26,4 +30,33 @@ p{
 
 .paddding-0px{
     padding: 0;
+}
+
+/*New Template*/
+.photoWrapper img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.continueReadingWrapper a{
+    background-color: transparent;
+    font-family: 'Rokkitt', serif;
+    border: 1px solid orange;
+    border-radius: 18px;
+    padding: 7px 15px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: inherit;
+}
+
+.continueReadingWrapper a:hover{
+    text-decoration: none;
+    background-color: orange;
+    color: white;
+}
+
+.dividerDiv{
+    border-bottom: 2px solid lightgrey;
+    margin: 45px 0;
 }
