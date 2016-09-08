@@ -4,6 +4,18 @@
 
 @import 'https://fonts.googleapis.com/css?family=Rokkitt';
 
+.postsWrapper{
+    padding: 10px 45px;
+}
+
+.postWrapper{
+    padding-bottom: 25px;
+}
+
+.paddding-0px{
+    padding: 0;
+}
+
 h3{
     font-family: 'Rokkitt', serif;
     font-size: 27px;
@@ -15,21 +27,9 @@ h3{
 p{
     color: #282828;
     font-family: 'Droid Serif', serif;
-    font-size: 18px;
+    font-size: 17px;
     word-spacing: 2px;
     line-height: 140%;
-}
-
-.postsWrapper{
-    padding: 10px 45px;
-}
-
-.postWrapper{
-    padding-bottom: 25px;
-}
-
-.paddding-0px{
-    padding: 0;
 }
 
 /*New Template*/
@@ -45,7 +45,7 @@ p{
     border: 1px solid orange;
     border-radius: 18px;
     padding: 7px 15px;
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 1px;
     color: inherit;
 }

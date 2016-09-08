@@ -2,13 +2,13 @@
 
   <!--Post Upper Wrapper: Start-->
 
-  <div class="postUpperWrapper">
+  <div class="postUpperWrapper" *ngFor="let blog of allPosts;">
 
     <!--Image Wrapper: Start-->
 
     <div class="row">
       <div class="col-sm-12 photoWrapper" style="padding: 0;">
-        <img src="../Assets/images/pine-seeds.png" class="img-responsive" alt="Cinque Terre" width="1000" height="300">
+        <img src="{{ blog.imageUrl }}" class="img-responsive" alt="Cinque Terre" width="1000" height="300">
       </div>
     </div>
     <!--Image Wrapper: End-->
@@ -17,10 +17,10 @@
 
     <div class="row">
       <div class="col-sm-12 titleWrapper" style="padding: 0;">
-        <a href="#"><h3>Clickable Title Goes Here!</h3></a>
+        <a [routerLink] = "[blog.id]"><h3>{{ blog.title }}</h3></a>
       </div>
       <div class="col-sm-12 titleWrapper" style="padding: 0;">
-        Posted By <span class="authoName">thebisho</span> on <span class="posteDate">September 5, 2016</span>
+        Posted By <span class="authoName">{{ blog.authorName }}</span> on <span class="posteDate">{{ blog.postedDate }}</span>
       </div>
     </div>
     <!--Title And Infos: End-->
@@ -30,16 +30,7 @@
     <div class="row">
       <div class="col-sm-12 blogPostSnippet" style="padding: 0; margin-top:12px;">
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus quis in, 
-            doloribus dolores ipsam. Laborum ratione suscipit nemo modi officiis, ipsum veritatis 
-            impedit recusandae, expedita debitis incidunt, rem at unde. Lorem ipsum dolor sit amet, 
-            consectetur adipisicing elit. Deserunt nisi neque quam beatae, 
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus quis in, 
-            doloribus dolores ipsam. Laborum ratione suscipit nemo modi officiis, ipsum veritatis 
-            impedit recusandae, expedita debitis incidunt, rem at unde. Lorem ipsum dolor sit amet, 
-            consectetur adipisicing elit. Deserunt nisi neque quam beatae...
+            {{ blog.post }}
         </p>
       </div>
     </div>
@@ -49,7 +40,7 @@
 
     <div class="row">
       <div class="com-sm-12 continueReadingWrapper" style="padding:0; margin-top:12px;">
-        <a href="#" class="continueReadingButton">Continue Reading</a>
+        <a [routerLink] = "[blog.id]" class="continueReadingButton">Continue Reading</a>
       </div>
     </div>
     <!--Continue Action: End-->
@@ -65,207 +56,6 @@
 
   </div>
   <!--Post Upper Wrapper: End-->
-
-
-  <!-------------------------------------------------dfjalsdkfjalskdf------------->
-  <!--Post Upper Wrapper: Start-->
-
-  <div class="postUpperWrapper">
-
-    <!--Image Wrapper: Start-->
-
-    <div class="row">
-      <div class="col-sm-12 photoWrapper" style="padding: 0;">
-        <img src="../Assets/images/pine-seeds.png" class="img-responsive" alt="Cinque Terre" width="1000" height="300">
-      </div>
-    </div>
-    <!--Image Wrapper: End-->
-
-    <!--Title And Infos: Start-->
-
-    <div class="row">
-      <div class="col-sm-12 titleWrapper" style="padding: 0;">
-        <a href="#"><h3>Clickable Title Goes Here!</h3></a>
-      </div>
-      <div class="col-sm-12 titleWrapper" style="padding: 0;">
-        Posted By <span class="authoName">thebisho</span> on <span class="posteDate">September 5, 2016</span>
-      </div>
-    </div>
-    <!--Title And Infos: End-->
-
-    <!--Blog Post Snippet:Start-->
-
-    <div class="row">
-      <div class="col-sm-12 blogPostSnippet" style="padding: 0; margin-top:12px;">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus quis in, 
-            doloribus dolores ipsam. Laborum ratione suscipit nemo modi officiis, ipsum veritatis 
-            impedit recusandae, expedita debitis incidunt, rem at unde. Lorem ipsum dolor sit amet, 
-            consectetur adipisicing elit. Deserunt nisi neque quam beatae, 
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus quis in, 
-            doloribus dolores ipsam. Laborum ratione suscipit nemo modi officiis, ipsum veritatis 
-            impedit recusandae, expedita debitis incidunt, rem at unde. Lorem ipsum dolor sit amet, 
-            consectetur adipisicing elit. Deserunt nisi neque quam beatae...
-        </p>
-      </div>
-    </div>
-    <!--Blog Post Snippet:End-->
-
-    <!--Continue Action: Start-->
-
-    <div class="row">
-      <div class="com-sm-12 continueReadingWrapper" style="padding:0; margin-top:12px;">
-        <a href="#" class="continueReadingButton">Continue Reading</a>
-      </div>
-    </div>
-    <!--Continue Action: End-->
-
-    <!--Divider: Start-->
-
-    <div class="row">
-      <div class="com-sm-12" style="padding:0;">
-        <div class="dividerDiv"></div>
-      </div>
-    </div>
-    <!--Divider: End-->
-
-  </div>
-  <!--Post Upper Wrapper: End-->
-
-  <!--Post Upper Wrapper: Start-->
-
-  <div class="postUpperWrapper">
-
-    <!--Image Wrapper: Start-->
-
-    <div class="row">
-      <div class="col-sm-12 photoWrapper" style="padding: 0;">
-        <img src="../Assets/images/pine-seeds.png" class="img-responsive" alt="Cinque Terre" width="1000" height="300">
-      </div>
-    </div>
-    <!--Image Wrapper: End-->
-
-    <!--Title And Infos: Start-->
-
-    <div class="row">
-      <div class="col-sm-12 titleWrapper" style="padding: 0;">
-        <a href="#"><h3>Clickable Title Goes Here!</h3></a>
-      </div>
-      <div class="col-sm-12 titleWrapper" style="padding: 0;">
-        Posted By <span class="authoName">thebisho</span> on <span class="posteDate">September 5, 2016</span>
-      </div>
-    </div>
-    <!--Title And Infos: End-->
-
-    <!--Blog Post Snippet:Start-->
-
-    <div class="row">
-      <div class="col-sm-12 blogPostSnippet" style="padding: 0; margin-top:12px;">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus quis in, 
-            doloribus dolores ipsam. Laborum ratione suscipit nemo modi officiis, ipsum veritatis 
-            impedit recusandae, expedita debitis incidunt, rem at unde. Lorem ipsum dolor sit amet, 
-            consectetur adipisicing elit. Deserunt nisi neque quam beatae, 
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus quis in, 
-            doloribus dolores ipsam. Laborum ratione suscipit nemo modi officiis, ipsum veritatis 
-            impedit recusandae, expedita debitis incidunt, rem at unde. Lorem ipsum dolor sit amet, 
-            consectetur adipisicing elit. Deserunt nisi neque quam beatae...
-        </p>
-      </div>
-    </div>
-    <!--Blog Post Snippet:End-->
-
-    <!--Continue Action: Start-->
-
-    <div class="row">
-      <div class="com-sm-12 continueReadingWrapper" style="padding:0; margin-top:12px;">
-        <a href="#" class="continueReadingButton">Continue Reading</a>
-      </div>
-    </div>
-    <!--Continue Action: End-->
-
-    <!--Divider: Start-->
-
-    <div class="row">
-      <div class="com-sm-12" style="padding:0;">
-        <div class="dividerDiv"></div>
-      </div>
-    </div>
-    <!--Divider: End-->
-
-  </div>
-  <!--Post Upper Wrapper: End-->
-
-  <!--Post Upper Wrapper: Start-->
-
-  <div class="postUpperWrapper">
-
-    <!--Image Wrapper: Start-->
-
-    <div class="row">
-      <div class="col-sm-12 photoWrapper" style="padding: 0;">
-        <img src="../Assets/images/pine-seeds.png" class="img-responsive" alt="Cinque Terre" width="1000" height="300">
-      </div>
-    </div>
-    <!--Image Wrapper: End-->
-
-    <!--Title And Infos: Start-->
-
-    <div class="row">
-      <div class="col-sm-12 titleWrapper" style="padding: 0;">
-        <a href="#"><h3>Clickable Title Goes Here!</h3></a>
-      </div>
-      <div class="col-sm-12 titleWrapper" style="padding: 0;">
-        Posted By <span class="authoName">thebisho</span> on <span class="posteDate">September 5, 2016</span>
-      </div>
-    </div>
-    <!--Title And Infos: End-->
-
-    <!--Blog Post Snippet:Start-->
-
-    <div class="row">
-      <div class="col-sm-12 blogPostSnippet" style="padding: 0; margin-top:12px;">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus quis in, 
-            doloribus dolores ipsam. Laborum ratione suscipit nemo modi officiis, ipsum veritatis 
-            impedit recusandae, expedita debitis incidunt, rem at unde. Lorem ipsum dolor sit amet, 
-            consectetur adipisicing elit. Deserunt nisi neque quam beatae, 
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus quis in, 
-            doloribus dolores ipsam. Laborum ratione suscipit nemo modi officiis, ipsum veritatis 
-            impedit recusandae, expedita debitis incidunt, rem at unde. Lorem ipsum dolor sit amet, 
-            consectetur adipisicing elit. Deserunt nisi neque quam beatae...
-        </p>
-      </div>
-    </div>
-    <!--Blog Post Snippet:End-->
-
-    <!--Continue Action: Start-->
-
-    <div class="row">
-      <div class="com-sm-12 continueReadingWrapper" style="padding:0; margin-top:12px;">
-        <a href="#" class="continueReadingButton">Continue Reading</a>
-      </div>
-    </div>
-    <!--Continue Action: End-->
-
-    <!--Divider: Start-->
-
-    <div class="row">
-      <div class="com-sm-12" style="padding:0;">
-        <div class="dividerDiv"></div>
-      </div>
-    </div>
-    <!--Divider: End-->
-
-  </div>
-  <!--Post Upper Wrapper: End-->
-  <!-------------------------------------------------dfjalsdkfjalskdf------------->
 
 </section>
 

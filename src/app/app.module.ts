@@ -13,6 +13,8 @@ import { LoadpostsComponent } from './blog/loadposts.component';
 
 import { Routing } from './app.routing';
 
+import { BlogServiceService } from './blog/service/blog-service.service';
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -30,7 +32,7 @@ import { Routing } from './app.routing';
         ReactiveFormsModule,
         Routing
     ],
-    providers: [],
+    providers: [BlogServiceService],
     bootstrap: [AppComponent]
 })
 

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { BlogModel } from '../model/blogmodel';
+import { BlogServiceService } from '../service/blog-service.service';
+
 @Component({
   moduleId: module.id,
   selector: 'blog-all-posts',
@@ -8,9 +11,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllPostsComponent implements OnInit {
 
-  constructor() { }
+  allPosts: BlogModel[] = [];
+
+  constructor(private service: BlogServiceService) { }
 
   ngOnInit() {
+    this.allPosts = this.service.getAllPosts();
   }
 
 }
