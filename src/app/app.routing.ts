@@ -12,7 +12,8 @@ import { BLOGPOST_ROUTES } from './blog/blog.routing';
 const APP_ROUTES: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
   { path: 'main', component: MainPageComponent },
-  { path: 'allposts', component: AllPostsComponent , children: BLOGPOST_ROUTES }, //TODO:::::
+  { path: 'allposts', component: AllPostsComponent }, //TODO:::::
+  { path: 'blog/:id', component: PostComponent },
   { path: 'aboutme', component: AboutMeComponent },
   { path: 'contact', component: ContactComponent },
   { path: '**', component: MainPageComponent }

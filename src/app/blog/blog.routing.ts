@@ -6,5 +6,5 @@ import { PostComponent } from '../blog/post';
 
 export const BLOGPOST_ROUTES: RouterConfig = [
     { path: '', component: LoadpostsComponent },
-    { path: ':id', component: PostComponent }
+    { path: 'blog/:id', component: PostComponent }
 ];

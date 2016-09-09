@@ -17,7 +17,7 @@
 
     <div class="row">
       <div class="col-sm-12 titleWrapper" style="padding: 0;">
-        <a [routerLink] = "[blog.id]"><h3>{{ blog.title }}</h3></a>
+        <a [routerLink] = "['/blog',blog.id]"><h3>{{ blog.title }}</h3></a>
       </div>
       <div class="col-sm-12 titleWrapper" style="padding: 0;">
         Posted By <span class="authoName">{{ blog.authorName }}</span> on <span class="posteDate">{{ blog.postedDate }}</span>
@@ -40,7 +40,7 @@
 
     <div class="row">
       <div class="com-sm-12 continueReadingWrapper" style="padding:0; margin-top:12px;">
-        <a [routerLink] = "[blog.id]" class="continueReadingButton">Continue Reading</a>
+        <a [routerLink] = "['/blog',blog.id]" class="continueReadingButton">Continue Reading</a>
       </div>
     </div>
     <!--Continue Action: End-->
