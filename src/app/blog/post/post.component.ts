@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Rx';
-import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
 
 @Component({
   moduleId: module.id,
@@ -11,14 +11,22 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 })
 export class PostComponent implements OnInit, OnDestroy {
 
-  items: FirebaseListObservable<any[]>;
+  //ViewModel Properties
+  keyy: string = "thisis";
+  value: string;
+
+  item: FirebaseObjectObservable<any>;
   private blogId: number;
   private subscription: Subscription;
 
   constructor(private router: Router,
     private route: ActivatedRoute,
     af: AngularFire) {
-    this.items = af.database.list('items');
+    this.item = af.database.object('/Name', { preserveSnapshot: true });
+    this.item.subscribe(snapshot => {
+      this.keyy = snapshot.key;
+      this.value = snapshot.val();
+    })
   }
 
   ngOnInit() {
