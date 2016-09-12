@@ -1,7 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Rx';
-import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
+import { AngularFire, FirebaseObjectObservable, FirebaseListObservable } from 'angularfire2';
+
+import { BlogModel } from '../model/blogmodel';
 
 @Component({
   moduleId: module.id,
@@ -11,6 +13,12 @@ import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
 })
 export class PostComponent implements OnInit, OnDestroy {
 
+  private blogViewModelFirebase: BlogModel[] = [];
+
+  //retriving list of posts
+  items: FirebaseListObservable<any>;
+
+  tempData: any;
   //ViewModel Properties
   keyy: string = "thisis";
   value: string;
@@ -22,11 +30,32 @@ export class PostComponent implements OnInit, OnDestroy {
   constructor(private router: Router,
     private route: ActivatedRoute,
     af: AngularFire) {
-    this.item = af.database.object('/Name', { preserveSnapshot: true });
-    this.item.subscribe(snapshot => {
-      this.keyy = snapshot.key;
-      this.value = snapshot.val();
-    })
+
+      this.items = af.database.list('/posts');
+      console.log(this.items);
+
+    // this.items = af.database.list('/posts', { preserveSnapshot: true });
+    // this.items.subscribe(snap => {
+    //   snap.forEach(snap => {
+    //     this.tempData = [
+    //       new BlogModel(
+    //         snap.key,
+    //         snap.val().authorName,
+    //         snap.val().postedDate,
+    //         snap.val().title,
+    //         snap.val().post,
+    //         snap.val().imageUrl
+    //       )
+    //     ]
+
+    //     this.blogViewModelFirebase.push(this.tempData);
+    //     // console.log(this.blogViewModelFirebase);
+    //     // console.log(snap.key);
+    //     // console.log(snap.val().authorName);
+    //   })
+    //   console.log(this.blogViewModelFirebase);
+    // })
+
   }
 
   ngOnInit() {

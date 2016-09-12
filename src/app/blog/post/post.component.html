@@ -5,3 +5,10 @@
 
 <p>{{keyy}}</p>
 <p>{{value}}</p>
+
+
+<ul>
+  <li *ngFor="let item of items | async">
+    <input type="text" #updatetext [value]="item.$value" />
+  </li>
+</ul>
