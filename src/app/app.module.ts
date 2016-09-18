@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AngularFireModule } from 'angularfire2';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout.component';
@@ -37,6 +38,7 @@ export const firebaseConfig = {
     ],
     imports: [
         BrowserModule,
+        HttpModule,
         FormsModule,
         ReactiveFormsModule,
         Routing,

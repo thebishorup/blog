@@ -11,12 +11,21 @@ import { BlogServiceService } from '../service/blog-service.service';
 })
 export class AllPostsComponent implements OnInit {
 
-  allPosts: BlogModel[] = [];
+  allPosts: BlogModel[];
+  errorMessage: string;
 
   constructor(private service: BlogServiceService) { }
 
   ngOnInit() {
-    this.allPosts = this.service.getAllPosts();
+    this.getBlogPosts();
+    console.log(this.allPosts);
+  }
+
+  private getBlogPosts() {
+    this.service.getBlogPosts();
+    this.service.blogPostChanged.subscribe(
+      (blogPosts: BlogModel[]) => this.allPosts = blogPosts
+    );
   }
 
 }
